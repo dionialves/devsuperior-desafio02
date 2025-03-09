@@ -1,4 +1,4 @@
-package donialves.devsuperior_desafio02;
+package dionialves.devsuperior_desafio02;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DevsuperiorDesafio02Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DevsuperiorDesafio02Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DevsuperiorDesafio02Application.class, args);
+    }
 
 }
