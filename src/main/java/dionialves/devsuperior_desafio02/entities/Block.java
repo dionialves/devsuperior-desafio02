@@ -2,12 +2,10 @@ package dionialves.devsuperior_desafio02.entities;
 
 import java.time.Instant;
 
-import org.springframework.data.annotation.Id;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
@@ -18,13 +16,13 @@ public class Block {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
-    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-    private Instant start;
+    // @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+    private Instant startTime;
 
-    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-    private Instant end;
+    // @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+    private Instant endTime;
 
     @ManyToOne
     @JoinColumn(name = "activity_id")
@@ -33,35 +31,35 @@ public class Block {
     public Block() {
     }
 
-    public Block(Integer id, Instant start, Instant end, Activity activity) {
+    public Block(Long id, Instant start, Instant end, Activity activity) {
         this.id = id;
-        this.start = start;
-        this.end = end;
+        this.startTime = start;
+        this.endTime = end;
         this.activity = activity;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Instant getStart() {
-        return start;
+    public Instant getStartTime() {
+        return startTime;
     }
 
-    public void setStart(Instant start) {
-        this.start = start;
+    public void setStartTime(Instant start) {
+        this.startTime = start;
     }
 
-    public Instant getEnd() {
-        return end;
+    public Instant getEndTime() {
+        return endTime;
     }
 
-    public void setEnd(Instant end) {
-        this.end = end;
+    public void setEndTime(Instant end) {
+        this.endTime = end;
     }
 
     public Activity getActivity() {
